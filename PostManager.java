@@ -9,13 +9,12 @@ public class PostManager {
     }
 
     public void createPost(Post post) {
-        postList.add(post);
+        System.out.println("Post created.");
     }
 
     public void showPosts() {
-        if (postList.isEmpty()) {
+        if (postList.size() == 0) {
             System.out.println("No posts available.");
-            return;
         }
 
         for (Post post : postList) {
@@ -26,7 +25,7 @@ public class PostManager {
     public void updatePost(int index, String newContent) {
         if (index >= 0 && index < postList.size()) {
             Post post = postList.get(index);
-            post.updateContent(newContent);
+            post.updateContent(Content);
             System.out.println("Post updated successfully.");
         } else {
             System.out.println("Post not found.");
