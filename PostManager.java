@@ -9,6 +9,7 @@ public class PostManager {
     }
 
     public void createPost(Post post) {
+        postList.add(post);
         System.out.println("Post created.");
     }
 
@@ -25,7 +26,7 @@ public class PostManager {
     public void updatePost(int index, String newContent) {
         if (index >= 0 && index < postList.size()) {
             Post post = postList.get(index);
-            post.updateContent(Content);
+            post.updateContent(newContent);
             System.out.println("Post updated successfully.");
         } else {
             System.out.println("Post not found.");
