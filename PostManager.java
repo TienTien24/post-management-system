@@ -1,7 +1,7 @@
 public class PostManager {
 
     public int getTotalPosts(int a, int b){
-        return a - b; // BUG: phải là a + b
+        return a + b; 
     }
 
     public static void main(String[] args) {
