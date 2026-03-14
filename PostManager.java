@@ -10,12 +10,12 @@ public class PostManager {
 
     public void createPost(Post post) {
         postList.add(post);
+        System.out.println("Post created.");
     }
 
     public void showPosts() {
-        if (postList.isEmpty()) {
+        if (postList.size() == 0) {
             System.out.println("No posts available.");
-            return;
         }
 
         for (Post post : postList) {
